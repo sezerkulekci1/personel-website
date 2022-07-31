@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <button>formun dışında</button>
+    <form action="/pizza">
+        <button>Lütfen Formu Gönderme</button>
+        <label for="kullanıcıadı">Kullanıcı Adı Giriniz</label>
+        <input id="kullanıcıadı" type="text" placeholder="Kullanıcı Adı" name="kullanıcıadı">
+        <label for="sifre">Şifre Giriniz</label>
+        <input id="sifre" type="password" placeholder="Şifre" name="password">
+        <label for="renk">Renk Seçiniz</label>
+        <input id="renk" type="color" name="color">
+        <label for="numara">Numara Giriniz</label>
+        <input id="numara" type="number" name="num">
+        <button>submit</button>
+        <input type="submit" value="Tıklayın">
+    </form>
+    <hr>
+    <h3>reddit search</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Redditte Ara</button>
+        <!-- https://www.reddit.com/search?query=fil
+        https://www.reddit.com/search/?q=fil -->
+    </form> 
+    <hr>
+    <h3>google search</h3>
+    <form action="https://www.google.com.tr/search">
+        <input type="text" name="q">
+        <button>Googleda Ara</button>
+    </form>
+    <hr>
+    <h3>youtube search</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>youtube'da Ara</button>
+
+    </form>
+    <hr>
+    <h2>Daha fazla input</h2>
+    <form action="/birds">
+        <input type="checkbox" name="tos" id="kabul" checked>
+        <label for="kabul">Kabul ediyorum</label>
+        <p>
+            <label for="xs">XS</label>
+        <input type="radio" name="boyut" id="xs" value="xs">
+        <label for="s">S</label>
+        <input type="radio" name="boyut" id="s" value="s">
+        <label for="m">M</label>
+        <input type="radio" name="boyut" id="m" value="m">
+        </p>
+        <p>
+        <label for="hayvan">Favori Hayvanınızı Seçiniz</label>
+        <select name="hayvan" id="hayvan">
+            <option value="balik">balık</option>
+            <option value="kus" selected>kuş</option>
+            <option value="kedi">kedi</option>
+            <option value="kopek">köpek</option>
+        </select>
+    </p>
+    <hr>
+    <p>
+        <label for="peynir">peynir miktari</label>
+        <input type="range" name="peynir seviyesi" id="peynir" step="7" min="1" max="100" value="75" >
+    </p>
+        <label for="istek">özel istek</label> <br>
+        <textarea name="istek" id="istek" cols="20" rows="10" placeholder="Buraya bir şeyler yazın"></textarea>
+        <button>Yolla
+        </button>
+    </form> <br>
+    <form action="#">
+        <div> </div><label for="kullanıcıadi">username</label>
+            <input type="text" name="kullanıcıadi" id="kullanıcıadi" placeholder="kullanıcı adı girniz"> <div>
+        <div>
+            <label for="sifre1">password</label>
+            <input type="password" name="sifre1" id="sifre1" placeholder="şifre giriniz"> <br>
+            <button>Register</button>
+        </div> 
+    </form>
+    <h2>Doğrulamalar</h2>
+    <form action="/yedek">
+        <label for="ilk">İsim Giriniz</label>
+        <input type="text" name="ilk" id="ilk" required>
+        <p>
+        <label for="kullanıcıadı">Kullanıcı Adı</label> 
+        <input type="text" id="kullanıcıadı" minlength="5" maxlength="25" required> </p>
+        <p><h2>Url Doğrulama</h2>
+        <p><input type="url" name="" id=""></p></p>
+        <button>submit</button>
+    </form>
+    
+</body>
+</html>
+
+<!-- http://127.0.0.1:5500/pizza?kullanıcıadı=sezer&password=asdasd&color=%23000000&num=5132 -->
+<!-- https://www.google.com.tr/search?q=pizza -->
+<!-- http://127.0.0.1:5500/birds?tos=on -->
